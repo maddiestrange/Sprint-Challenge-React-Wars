@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import PersonCard from './PersonCard';
 import { Card } from 'semantic-ui-react';
 
@@ -18,16 +18,16 @@ const Person = () => {
         setData(response.data.results);
         console.log("swapi:", data.results);
       });
-  }, []);
+    }, []);
 
-  return (
-    <Card.Group itemsPerRow={5}>
-        {data.map(data =>{
-        return <PersonCard name={data.name} mass={data.mass}
-        birth_year={data.birth_year}/>
-        })}
-    </Card.Group>
-  );
-}
+    return (
+        <Card.Group itemsPerRow={5}>
+            {data.map(data =>{
+            return <PersonCard name={data.name} 
+                               mass={data.mass}
+                               birth_year={data.birth_year}/> })}
+        </Card.Group>
+    );
+    }
 
 export default Person;

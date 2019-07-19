@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { Card } from 'semantic-ui-react';
 
 const PersonCard = (props) => {
@@ -11,7 +11,7 @@ const PersonCard = (props) => {
         <Card.Description>{props.mame} was born in {props.birth_year}</Card.Description>
       </Card.Content>
     </Card>
-);
-  };
+  );
+};
 
-export default PersonCard
+export default PersonCard;
